@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  tasks: 
+  - name: Stop iptables   
+    service: name=iptables state=stopped enabled=false
+  - name: Stop iptables6   
+    service: name=ip6tables state=stopped enabled=false
